@@ -72,6 +72,14 @@ app.use("/campgrounds",campgroundRoutes)      //here this line tells that start 
 app.use("/campgrounds/:id/comments",commentRoutes)
 
 
+
+
+
+//changes for tourism app
+app.get("/siteplaces",function(req,res){
+    res.render("campgrounds/siteplaces")
+})
+
 app.listen(process.env.PORT,process.env.IP,function(){
     console.log("the tourism server has started")
 })
