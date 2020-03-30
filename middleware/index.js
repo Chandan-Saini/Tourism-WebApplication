@@ -13,7 +13,7 @@ middlewareObj.checkCampgroundOwnership = function(req ,res ,next){              
     if(req.isAuthenticated()){
         Campground.findById(req.params.id, function(err,foundCampground){
         if(err || !foundCampground){                                                //this line used here to handel the error so that our site dont crash if someone visits the edit campground page and changes one character of the campground id or shorters the id, to know more watch the video of Ian at lecture 6 if unit-38
-            req.flash("error","Product not found")
+            req.flash("error","Place not found")
             res.redirect("back")
         } else{
             //does user own the campground

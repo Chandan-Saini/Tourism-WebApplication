@@ -73,7 +73,7 @@ app.use("/campgrounds/:id/comments",commentRoutes)
 
 
 app.listen(process.env.PORT,process.env.IP,function(){
-    console.log("the yelpCamp server has started")
+    console.log("the tourism server has started")
 })
 
 

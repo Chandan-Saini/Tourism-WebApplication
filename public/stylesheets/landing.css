@@ -42,22 +42,22 @@ body {
 }
 
 .slideshow li:nth-child(1) { 
-  background-image: url(https://images.unsplash.com/photo-1468495244123-6c6c332eeece?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=922&q=80) 
+  background-image: url(https://timebusinessnews.com/wp-content/uploads/1733_1-2.jpg) 
 }
 .slideshow li:nth-child(2) { 
-  background-image: url(https://images.unsplash.com/photo-1496950866446-3253e1470e8e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+  background-image: url(https://blog.hubspot.com/hubfs/Design%20101%20Asymmetrical%20and%20Symmetrical%20Balance.png); 
   animation-delay: 10s; 
 }
 .slideshow li:nth-child(3) { 
-  background-image: url(https://images.unsplash.com/photo-1483181957632-8bda974cbc91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  background-image: url(https://wallpapercave.com/wp/n2paec5.jpg);
   animation-delay: 20s; 
 }
 .slideshow li:nth-child(4) { 
-  background-image: url(https://images.unsplash.com/photo-1563721465915-7b56232b43c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80);
+  background-image: url(https://www.jakpost.travel/wimages/large/22-224304_full-hd-wallpaper-boat-beach-azure-ocean-goa.jpg);
   animation-delay: 30s; 
 }
 .slideshow li:nth-child(5) { 
-  background-image: url(https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/b5/Vishnath_temple.png);
   animation-delay: 40s; 
 }
 

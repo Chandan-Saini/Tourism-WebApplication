@@ -17,7 +17,7 @@ router.get("/",function(req,res){   //here the route used is /campgrounds but we
           } else{
              
               if(allcampgrounds.length < 1){
-                   noMatch ="No products match that query, please try again."
+                   noMatch ="No places match that query, please try again."
               }
                res.render("campgrounds/index",{campgrounds:allcampgrounds, noMatch: noMatch})
           }

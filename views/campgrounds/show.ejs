@@ -4,11 +4,11 @@
 
     <div class="row">
         <div class="col-md-3">
-             <p class="lead">WEcart</p>
+             <p class="lead">TouriSum</p>
              <div class="list-group">
-                 <li class="list-group-item active  text-center"> Product Info</li>
-                 <li class="list-group-item " style="background:#f0ad4e"><a href="https://cdn.dribbble.com/users/1260892/screenshots/7151607/media/996de2cf8e7206459c808052ffa07152.gif" class="btn btn-warning btn-block"> Add To Cart</a></li>
-                 <li class="list-group-item " style="background:#5cb85c"><a href="http://www.protontech.in/images/Solutions_icon/Snapshot/2payment_gateway_banner1.PNG" class="btn btn-success btn-block"> Buy This Product </a></li>
+                 <li class="list-group-item active  text-center"> Place Info</li>
+                 <!--<li class="list-group-item " style="background:#f0ad4e"><a href="https://cdn.dribbble.com/users/1260892/screenshots/7151607/media/996de2cf8e7206459c808052ffa07152.gif" class="btn btn-warning btn-block"> Add To Cart</a></li>-->
+                 <!--<li class="list-group-item " style="background:#5cb85c"><a href="http://www.protontech.in/images/Solutions_icon/Snapshot/2payment_gateway_banner1.PNG" class="btn btn-success btn-block"> Buy This Product </a></li>-->
 
              </div>
         </div>
@@ -23,13 +23,13 @@
                      <em>Product added by:<a href="/users/<%= campground.author.id %>"><%=campground.author.username %></a>, <%= moment(campground.createdAt).fromNow() %></em>
                    </p>
                   
-                   <a href="<%=campground.youtubeurl %>">Click this link to view youtube reviews of this product </a>
+                   <a href="<%=campground.youtubeurl %>">Click this link to view youtube reviews of this place </a>
 
 <br>
                     <% if( currentUser && campground.author.id.equals(currentUser._id)){ %>                          <!-- this line helps to know that loggedIn user and author is same or not, if they are same then only going to see the delete and edit buttons otherwise not-->        
-                    <a class="btn btn-warning" href="/campgrounds/<%=campground._id%>/edit">Edit Product</a>
+                    <a class="btn btn-warning" href="/campgrounds/<%=campground._id%>/edit">Edit Place</a>
                     <form class="delete-form" action="/campgrounds/<%=campground._id%>?_method=DELETE" method="POST">
-                        <button class="btn btn-danger">Delete Product</button>
+                        <button class="btn btn-danger">Delete Place</button>
                     </form>
                     <% } %>
                 </div>

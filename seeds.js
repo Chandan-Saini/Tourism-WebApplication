@@ -41,7 +41,7 @@ function seedDB(){
                     if(err){
                         console.log(err)
                     } else {
-                        console.log("added a campground");
+                        console.log("added a place");
                         //create a comment
                         Comment.create(
                             {

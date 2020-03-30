@@ -41,7 +41,7 @@ router.post("/register",function(req,res){
             return res.render('register',{error:err.message});                        //to know the meaning of these routes watch vid-5 unit-34
         } 
         passport.authenticate("local")(req,res, function(){
-            req.flash("success","Welcome to WEcart " + user.username)      //it will print message with the name of the user
+            req.flash("success","Welcome to TouriSum " + user.username)      //it will print message with the name of the user
             res.redirect("/campgrounds")
         })
     })
