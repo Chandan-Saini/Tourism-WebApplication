@@ -16,11 +16,11 @@
             <div class="thumbnail">
                <a href="#"> <img src="<%= campground.image%>"></a>
                 <div class="caption-full">
-                    <h4 class="pull-right">₹<%= campground.price%> for 1</h4>
+                    <h4 class="pull-right">Entry fee ₹<%= campground.price%></h4>
                     <h4><a><%= campground.name%></a></h4>
                     <p><%= campground.description%></p>
                    <p>
-                     <em>Product added by:<a href="/users/<%= campground.author.id %>"><%=campground.author.username %></a>, <%= moment(campground.createdAt).fromNow() %></em>
+                     <em>Place added by:<a href="/users/<%= campground.author.id %>"><%=campground.author.username %></a>, <%= moment(campground.createdAt).fromNow() %></em>
                    </p>
                   
                    <a href="<%=campground.youtubeurl %>">Click this link to view youtube reviews of this place </a>
