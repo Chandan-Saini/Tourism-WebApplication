@@ -11,7 +11,7 @@
      <p><%= user.description %></p>
      </div>
      <div class="col-md-4">
-         <h3 style="background-color:#1063EE ; margin-top:70px; border-radius:5px; color:white ">List of <%= user.username %>'s Products</h3>
+         <h3 style="background-color:#1063EE ; margin-top:70px; border-radius:5px; color:white ">List of places added by [<%= user.username %>]</h3>
          <ol>
              <% campgrounds.forEach(function(campground){ %>
              <li><a href="/campgrounds/<%=campground.id %>"><%=campground.name %></a></li>
