@@ -152,7 +152,7 @@ router.get("/:id",function(req,res){                            //here the whole
             req.flash("error","Campground not found")  
             res.redirect("back")
         } else{
-            console.log(foundCampground)
+            // console.log(foundCampground)
             //render show template with that campground
              res.render("campgrounds/show",{ campground: foundCampground})
         }

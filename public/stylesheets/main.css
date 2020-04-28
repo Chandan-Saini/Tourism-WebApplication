@@ -41,9 +41,13 @@
 
 /* Google Maps */
 #map {
+   
     height: 400px;
     width: 100%;
+
 }
+
+.cmap:hover img { opacity:.7;}
 
 
 
