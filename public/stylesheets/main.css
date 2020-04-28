@@ -24,6 +24,10 @@
    height:550px;
 }
 
+.checked {
+    color: orange;
+}
+
 
 .jumbotron{
     background: url("tourimg.png") no-repeat center center ; 
@@ -35,7 +39,11 @@
 }
 
 
-
+/* Google Maps */
+#map {
+    height: 400px;
+    width: 100%;
+}
 
 
 

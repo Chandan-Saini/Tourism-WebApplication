@@ -7,11 +7,12 @@
              <p class="lead">TouriSum</p>
              <div class="list-group">
                  <li class="list-group-item active  text-center"> Place Info</li>
-                 <!--<li class="list-group-item " style="background:#f0ad4e"><a href="https://cdn.dribbble.com/users/1260892/screenshots/7151607/media/996de2cf8e7206459c808052ffa07152.gif" class="btn btn-warning btn-block"> Add To Cart</a></li>-->
-                 <!--<li class="list-group-item " style="background:#5cb85c"><a href="http://www.protontech.in/images/Solutions_icon/Snapshot/2payment_gateway_banner1.PNG" class="btn btn-success btn-block"> Buy This Product </a></li>-->
-
+                 
              </div>
-        </div>
+            <div ><img id="map" src='https://lh6.googleusercontent.com/proxy/j6PYZFQ25fRNrMKASYIToDZ_6ZLklTDYeMHx8cjZm75lV3pLBtbuVdgP8VE48M-GPoIV5lxAFhc7Eq0hzFqSqkGkc2F6ARJbH98goINDCcyfaH1RTMazrw=s0-d'> </div>
+     
+             </div>
+             
         <div class="col-md-9">
             <div class="thumbnail">
                <a href="#"> <img src="<%= campground.image%>"></a>
@@ -34,6 +35,82 @@
                     <% } %>
                 </div>
             </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--Review section-->
+            <div class="thumbnail">
+                <div class="caption-full">
+                    <% if (campground.rating === 0) { %>
+                    <h5>
+                        <em>No reviews yet.</em>
+                    </h5>
+                    <% } else { %>
+                    <p>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star <% if (campground.rating > 1.5) { %> checked <% } %>"></span>
+                        <span class="fa fa-star <% if (campground.rating > 2.5) { %> checked <% } %>"></span>
+                        <span class="fa fa-star <% if (campground.rating > 3.5) { %> checked <% } %>"></span>
+                        <span class="fa fa-star <% if (campground.rating > 4.5) { %> checked <% } %>"></span>
+                        <em>(total reviews: <%= campground.reviews.length %>)</em>
+                    </p>
+                    <p>
+                        Current campground rating: <strong><%= campground.rating.toFixed(2) %></strong>
+                    </p>
+                    <p><h4>Latest reviews for this campground:</h4></p>
+                    <hr style="margin-top: 0;">
+                    <% campground.reviews.slice(0, 5).forEach(function(review){ %>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <%- '<span class="fa fa-star checked"></span>'.repeat(review.rating) %><%- '<span class="fa fa-star"></span>'.repeat(5 - review.rating) %>
+                            <div>Review by: <strong><%= review.author.username %></strong></div>
+                            <span><em><%= review.updatedAt.toDateString() %></em></span>
+                        </div>
+                        <div class="col-md-9">
+                            <p style="text-align: justify; word-wrap: break-word;">
+                                <%= review.text %>
+                            </p>
+                            <% if(currentUser && review.author.id.equals(currentUser._id)){ %>
+                            <a class="btn btn-xs btn-warning"
+                               href="/campgrounds/<%=campground._id %>/reviews/<%=review._id %>/edit">Edit</a>
+                            <form id="delete-form" action="/campgrounds/<%=campground._id %>/reviews/<%=review._id %>?_method=DELETE" method="POST">
+                                <input type="submit" class="btn btn-xs btn-danger" value="Delete">
+                            </form>
+                            <% } %>
+                        </div>
+                    </div>
+                    <hr>
+                    <% }); %>
+                    <div style="margin-bottom: 10px;">
+                        <h4><a href="/campgrounds/<%= campground._id %>/reviews"><i class="fa fa-search" aria-hidden="true"></i> See all reviews</a></h4>
+                    </div>
+                    <% } %>
+                    <div>
+                        <a class="btn btn-primary btn-lg <% if (currentUser && campground.reviews.some(function (review) {return review.author.id.equals(currentUser._id)})) { %> disabled <% } %>" href="/campgrounds/<%= campground._id %>/reviews/new">
+                            Write a New Review</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <!--comments section-->
             <div class="well">
                 <div class="text-right">
                         <a class="btn btn-success" href="/campgrounds/<%=campground._id%>/comments/new">Add New Comment</a>
